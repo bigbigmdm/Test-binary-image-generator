@@ -11,6 +11,11 @@ int main(int argc, char* argv[])
    {
        cout << "File name = " << argv[1] << "   Size = " << argv[2] << " bytes." << endl;
        fileSize = strtol(argv[2], NULL, 10);
+       if ((fileSize < 1) || (fileSize > 134217728))
+       {  
+	  cout << "File size is too big!" << endl;
+	  return -1;
+       }   
        addrSize = 0;
        j = fileSize;
        hiDigit = 1;
