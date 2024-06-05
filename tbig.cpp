@@ -66,10 +66,9 @@ int main(int argc, char* argv[])
 			  if (k > 0x7e) k = 0x40;
 		  }
 		  curPos = curPos + 16;    
-	   }
-       
-       
+	   }      
        file.close();
+       cout << "Done!" << endl;   
    }
    else cout << "Use: tbig <File name> <File size>\nExample: tbig 25q32.bin 4194304\n" << endl;
 }	
